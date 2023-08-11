@@ -3,6 +3,12 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      notes:
+        description: "Run information"
+        type: string
+
 jobs:
   test:
     runs-on: ubuntu-latest
